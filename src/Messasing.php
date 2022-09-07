@@ -129,7 +129,7 @@ class Messasing
             self::BASE_URL . $path, 
             [
                 'Content-Type' => 'application/json',
-                'Access-Token' => 'key=' . $this->apiKey
+                'Authorization' => 'key=' . $this->apiKey
             ], $body);
 
         $response = $this->guzzle->send($request);
